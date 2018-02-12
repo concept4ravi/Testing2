@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="26888" started-at="2018-02-12T08:44:58Z" finished-at="2018-02-12T08:45:25Z">
+    <groups>
+    </groups>
+    <test name="SignIn" duration-ms="26888" started-at="2018-02-12T08:44:58Z" finished-at="2018-02-12T08:45:25Z">
+      <class name="testng_Framework.SignInTest">
+        <test-method status="PASS" signature="setBrowser(java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="setBrowser" is-config="true" duration-ms="627" started-at="2018-02-12T14:14:58Z" finished-at="2018-02-12T14:14:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method status="PASS" signature="HomePage()[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="HomePage" duration-ms="3963" started-at="2018-02-12T14:14:59Z" finished-at="2018-02-12T14:15:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePage -->
+        <test-method status="PASS" signature="openSignInPage()[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="openSignInPage" duration-ms="909" started-at="2018-02-12T14:15:03Z" depends-on-methods="testng_Framework.SignInTest.HomePage" finished-at="2018-02-12T14:15:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSignInPage -->
+        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="signIn" duration-ms="11497" started-at="2018-02-12T14:15:04Z" data-provider="Login" depends-on-methods="testng_Framework.SignInTest.openSignInPage" finished-at="2018-02-12T14:15:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3006ravikumar@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[54252gohangoku]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="signIn" duration-ms="9583" started-at="2018-02-12T14:15:16Z" data-provider="Login" depends-on-methods="testng_Framework.SignInTest.openSignInPage" finished-at="2018-02-12T14:15:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[concept4ravi@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[54252gohangoku]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+      </class> <!-- testng_Framework.SignInTest -->
+    </test> <!-- SignIn -->
+  </suite> <!-- Suite -->
+</testng-results>
