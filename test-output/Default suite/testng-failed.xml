@@ -5,6 +5,7 @@
     <classes>
       <class name="testng_Framework.SignInTest">
         <methods>
+          <include name="openSignInPage"/>
           <include name="setBrowser"/>
           <include name="HomePage"/>
           <include name="signIn"/>

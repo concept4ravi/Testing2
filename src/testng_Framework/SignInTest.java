@@ -1,61 +1,44 @@
 package testng_Framework;
 
 
-import java.util.concurrent.TimeUnit;
+import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-// import HomePage.java,LoginPage.java
-import pageObjects.*;
+import supportingJavaFiles.BaseClass;
 
-public class SignInTest extends RequiredData{
-	private WebDriver driver;
-	private HomePage hp;
-	private LoginPage lp;
-	private UserLoggedInPage uli;
+public class SignInTest extends BaseClass{
 	public String Pwindow ;
+	static int i=1;
 	Boolean flag;
-	@BeforeTest
-	@Parameters({"browser"})
-	public void setBrowser(String browser) {
-		if(browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver",firefoxDriverLocation); 
-			driver = new FirefoxDriver();
-		}else if(browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",chromeDriverLocation);
-			driver = new ChromeDriver();
-		}
-		hp = new HomePage(driver);
-		lp = new LoginPage(driver);
-		uli = new UserLoggedInPage(driver);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	}
 	@Test
 	public void HomePage() {
+		
 		driver.get(baseUrl);
+//		Reporter.log("BaseUrl Open",true);
 		try {
 
 			flag=hp.logo_Amazon().isDisplayed();
 
 		}catch(Exception e) {
+			screenshoot();
 			flag=false;
-			System.out.println("B");
-			System.out.println(e.getMessage());
 		}
 		Assert.assertTrue(flag, "Unable to access "+baseUrl);
+		
 	}
 	@Test(dependsOnMethods="HomePage")
 	public void openSignInPage() throws InterruptedException {
 		hp.lnk_helloSignInYourOrders().click();
+//		Reporter.log("SignIn Clicked",true);
 		verifySignInPage();
 	}
 	@Test(dataProvider = "Login",dependsOnMethods="openSignInPage")
@@ -65,6 +48,7 @@ public class SignInTest extends RequiredData{
 			flag=lp.txt_emailOrMobile().isDisplayed();
 
 		}catch(Exception e) {
+			screenshoot();
 			flag=false;
 			System.out.println(e.getMessage());
 		}
@@ -72,49 +56,74 @@ public class SignInTest extends RequiredData{
 		lp.txt_emailOrMobile().click();
 		lp.txt_emailOrMobile().clear();
 		lp.txt_emailOrMobile().sendKeys(uname);
+//		Reporter.log("Email Entered",true);
 		lp.btn_continue().click();
+//		Reporter.log("Email Continue button clicked",true);
 		try {
 			flag=lp.txt_password().isDisplayed();
 
 		}catch(Exception e) {
+			screenshoot();
 			flag=false;
 			System.out.println(e.getMessage());
 		}
+		
 		Assert.assertTrue(flag, "Password field not available");
 		lp.txt_password().click();
 		lp.txt_password().clear();
 		lp.txt_password().sendKeys(password);
+//		Reporter.log("Password Entered",true);
 		lp.btn_login().click();
+//		Reporter.log("Login Button Clicked",true);
 		Thread.sleep(1000);
 		WebElement link = driver.findElement(By.id("nav-link-yourAccount"));
 		boolean b = link.findElement(By.cssSelector(".nav-line-1")).getText().contains("Hello");
 		Assert.assertTrue(b,"Login Failed for Username "+uname+" with Password '"+password+"'");
-		System.out.println("Username "+uname+" with Password '"+password+"' is Successfully Logged In");
+//		Reporter.log("Username "+uname+" with Password '"+password+"' is Successfully Logged In",true);
 		signOut();
+//		Reporter.log("SignOut Success",true);
+		
 	}
 
 	public void signOut() throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(hp.lnk_helloSignInYourOrders()).perform();
 		Thread.sleep(2000);
-		uli.lnk_signOut().click();
-	}
-	
-	public void verifySignInPage() {
-		currUrl = driver.getCurrentUrl();
 		try {
-			flag=currUrl.contains("ap/signin")?true:false;
-
+			flag=uli.lnk_signOut().isDisplayed();
 		}catch(Exception e) {
 			flag=false;
-			System.out.println(e.getMessage());
 		}
-		Assert.assertTrue(flag, "Unable to access Sign In Page");
+		Assert.assertTrue(flag,"Unable to LogOut");
+		uli.lnk_signOut().click();
+	}
+
+	public void verifySignInPage() throws InterruptedException {
+		Thread.sleep(3000);
+		currUrl = driver.getCurrentUrl();
+		flag=currUrl.contains("ap/signin")?true:false;
+		if(!flag) {
+			screenshoot();
+			Assert.assertTrue(flag, "Unable to access Sign In Page");
+		}
+	}
+	
+	public void screenshoot() {
+		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+		 // now copy the  screenshot to desired location using copyFile //method
+		FileUtils.copyFile(src, new File("/home/intern/git/Testing2/AmazonAlt/screenshot/error"+i+".png"));
+		++i;
+		}
+		 
+		catch (IOException e)
+		 {
+		  System.out.println(e.getMessage());
+		 
+		 }
 	}
 
 }
-
-
 
 
 

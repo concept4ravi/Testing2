@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <test name="SignIn2(failed)(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testng_Framework.SignInTest">
+        <methods>
+          <include name="openSignInPage"/>
+          <include name="tearDown"/>
+          <include name="HomePage"/>
+          <include name="setBrowser"/>
+          <include name="signIn" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testng_Framework.SignInTest -->
+    </classes>
+  </test> <!-- SignIn2(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

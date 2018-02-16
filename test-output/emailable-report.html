@@ -9,13 +9,36 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">SignIn</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">26,888</td><td></td><td></td></tr>
+<tr><td><a href="#t0">SignIn2</a></td><td class="num">0</td><td class="num attn">2</td><td class="num attn">1</td><td class="num">2,749</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SignIn &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testng_Framework.SignInTest</td><td><a href="#m0">HomePage</a></td><td rowspan="1">1518425099607</td><td rowspan="1">3963</td></tr><tr class="passedeven"><td><a href="#m1">openSignInPage</a></td><td rowspan="1">1518425103571</td><td rowspan="1">909</td></tr><tr class="passedeven"><td><a href="#m2">signIn</a></td><td rowspan="2">1518425104775</td><td rowspan="2">11497</td></tr><tr class="passedeven"><td><a href="#m3">signIn</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SignIn2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testng_Framework.SignInTest</td><td><a href="#m0">HomePage</a></td><td rowspan="1">1518781129875</td><td rowspan="1">2042</td></tr><tr><th colspan="4">SignIn2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testng_Framework.SignInTest</td><td><a href="#m1">openSignInPage</a></td><td rowspan="1">1518781131926</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">signIn</a></td><td rowspan="1">1518781131927</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>SignIn</h2><h3 id="m0">testng_Framework.SignInTest#HomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testng_Framework.SignInTest#openSignInPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testng_Framework.SignInTest#signIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>3006ravikumar@gmail.com</td><td>54252gohangoku</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testng_Framework.SignInTest#signIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>concept4ravi@gmail.com</td><td>54252gohangoku</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SignIn2</h2><h3 id="m0">testng_Framework.SignInTest#HomePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=61.0.3163.91)
+  (Driver info: chromedriver=2.34.522913 (36222509aa6e819815938cbf2709b4849735537c),platform=Linux 3.10.0-514.el7.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:32.194Z&apos;
+System info: host: &apos;localhost.localdomain&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.10.0-514.el7.x86_64&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522913 (36222509aa6e81..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 61.0.3163.91, webStorageEnabled: true}
+Session ID: 46cabaa40bcabfb4787020f4527cdc30
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:343)
+	at testng_Framework.SignInTest.screenshoot(SignInTest.java:112)
+	at testng_Framework.SignInTest.HomePage(SignInTest.java:32)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testng_Framework.SignInTest#openSignInPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method SignInTest.openSignInPage()[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testng_Framework.SignInTest#signIn</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method SignInTest.signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methods
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

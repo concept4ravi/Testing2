@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="2" failed="1" ignored="0" total="3" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[Browser Opened]]>
+    </line>
+    <line>
+      <![CDATA[Implicit Wait Set]]>
+    </line>
+    <line>
+      <![CDATA[Browser Terminated]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="26888" started-at="2018-02-12T08:44:58Z" finished-at="2018-02-12T08:45:25Z">
+  <suite name="Suite" duration-ms="2749" started-at="2018-02-16T11:38:49Z" finished-at="2018-02-16T11:38:51Z">
     <groups>
     </groups>
-    <test name="SignIn" duration-ms="26888" started-at="2018-02-12T08:44:58Z" finished-at="2018-02-12T08:45:25Z">
+    <test name="SignIn2" duration-ms="2749" started-at="2018-02-16T11:38:49Z" finished-at="2018-02-16T11:38:51Z">
       <class name="testng_Framework.SignInTest">
-        <test-method status="PASS" signature="setBrowser(java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="setBrowser" is-config="true" duration-ms="627" started-at="2018-02-12T14:14:58Z" finished-at="2018-02-12T14:14:59Z">
+        <test-method status="PASS" signature="setBrowser(java.lang.String)[pri:0, instance:testng_Framework.SignInTest@2f943d71]" name="setBrowser" is-config="true" duration-ms="624" started-at="2018-02-16T17:08:49Z" finished-at="2018-02-16T17:08:49Z">
           <params>
             <param index="0">
               <value>
@@ -16,49 +25,58 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Browser Opened]]>
+            </line>
+            <line>
+              <![CDATA[Implicit Wait Set]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="HomePage()[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="HomePage" duration-ms="3963" started-at="2018-02-12T14:14:59Z" finished-at="2018-02-12T14:15:03Z">
+        <test-method status="FAIL" signature="HomePage()[pri:0, instance:testng_Framework.SignInTest@2f943d71]" name="HomePage" duration-ms="2042" started-at="2018-02-16T17:08:49Z" finished-at="2018-02-16T17:08:51Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closedfrom unknown error: web view not found  (Session info: chrome=61.0.3163.91)  (Driver info: chromedriver=2.34.522913 (36222509aa6e819815938cbf2709b4849735537c),platform=Linux 3.10.0-514.el7.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'System info: host: 'localhost.localdomain', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.10.0-514.el7.x86_64', java.version: '1.8.0_102'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522913 (36222509aa6e81..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 61.0.3163.91, webStorageEnabled: true}Session ID: 46cabaa40bcabfb4787020f4527cdc30]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closedfrom unknown error: web view not found  (Session info: chrome=61.0.3163.91)  (Driver info: chromedriver=2.34.522913 (36222509aa6e819815938cbf2709b4849735537c),platform=Linux 3.10.0-514.el7.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'System info: host: 'localhost.localdomain', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.10.0-514.el7.x86_64', java.version: '1.8.0_102'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522913 (36222509aa6e81..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 61.0.3163.91, webStorageEnabled: true}Session ID: 46cabaa40bcabfb4787020f4527cdc30at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:343)at testng_Framework.SignInTest.screenshoot(SignInTest.java:112)at testng_Framework.SignInTest.HomePage(SignInTest.java:32)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePage -->
-        <test-method status="PASS" signature="openSignInPage()[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="openSignInPage" duration-ms="909" started-at="2018-02-12T14:15:03Z" depends-on-methods="testng_Framework.SignInTest.HomePage" finished-at="2018-02-12T14:15:04Z">
+        <test-method status="SKIP" signature="openSignInPage()[pri:0, instance:testng_Framework.SignInTest@2f943d71]" name="openSignInPage" duration-ms="0" started-at="2018-02-16T17:08:51Z" depends-on-methods="testng_Framework.SignInTest.HomePage" finished-at="2018-02-16T17:08:51Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method SignInTest.openSignInPage()[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method SignInTest.openSignInPage()[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methodsat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openSignInPage -->
-        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="signIn" duration-ms="11497" started-at="2018-02-12T14:15:04Z" data-provider="Login" depends-on-methods="testng_Framework.SignInTest.openSignInPage" finished-at="2018-02-12T14:15:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3006ravikumar@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[54252gohangoku]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@2f943d71]" name="signIn" duration-ms="0" started-at="2018-02-16T17:08:51Z" data-provider="Login" depends-on-methods="testng_Framework.SignInTest.openSignInPage" finished-at="2018-02-16T17:08:51Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method SignInTest.signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method SignInTest.signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@2f943d71] depends on not successfully finished methodsat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:testng_Framework.SignInTest@3043fe0e]" name="signIn" duration-ms="9583" started-at="2018-02-12T14:15:16Z" data-provider="Login" depends-on-methods="testng_Framework.SignInTest.openSignInPage" finished-at="2018-02-12T14:15:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[concept4ravi@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[54252gohangoku]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testng_Framework.SignInTest@2f943d71]" name="tearDown" is-config="true" duration-ms="65" started-at="2018-02-16T17:08:51Z" finished-at="2018-02-16T17:08:51Z">
           <reporter-output>
+            <line>
+              <![CDATA[Browser Terminated]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- signIn -->
+        </test-method> <!-- tearDown -->
       </class> <!-- testng_Framework.SignInTest -->
-    </test> <!-- SignIn -->
+    </test> <!-- SignIn2 -->
   </suite> <!-- Suite -->
 </testng-results>
